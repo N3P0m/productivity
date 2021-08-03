@@ -1003,9 +1003,6 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 // ===/QUOTES===
 
 // ===FAQ===
-.section-faq {
-}
-
 .faq {
     &-slider {
         padding: 0;
@@ -1166,10 +1163,6 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 // ===/NEWSLETTER===
 
 // ===FOOTER===
-.section-footer {
-
-}
-
 .copyright {
     @include quicksand;
     display: block;
