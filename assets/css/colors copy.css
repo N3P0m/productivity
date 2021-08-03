@@ -1,0 +1,47 @@
+a {color: #FFFFFF}
+a {color: #FCFDFF}
+a {color: #F5F8FF}
+a {color: #EFEFF7}
+a {color: #E8ECF4}
+a {color: #E5EBF8}
+a {color: #EAF0FF}
+a {color: #D4DCF1}
+a {color: #DAE4FE}
+a {color: #D2E1FF}
+a {color: #C7D3FF}
+a {color: #AEB8D0}
+
+a {color: #ADB4D2}
+a {color: #8D96BD}
+a {color: #7A85AD}
+a {color: #7382A3}
+a {color: #697CA6}
+a {color: #5E81FE}
+a {color: #3A79FF}
+a {color: #4D6CE1}
+a {color: #495274}
+a {color: #3D4F9F}
+
+
+
+$color-blue-100: #ADB4D2;
+$color-blue-200: #8D96BD;
+$color-blue-300: #7A85AD;
+$color-blue-400: #7382A3;
+$color-blue-500: #697CA6;
+$color-blue-600: #5E81FE;
+$color-blue-700: #3A79FF;
+$color-blue-800: #4D6CE1;
+$color-blue-900: #495274;
+$color-blue-1000: #3D4F9F;
+
+$color-gray-100: #F5F8FF;
+$color-gray-200: #EFEFF7;
+$color-gray-300: #E8ECF4;
+$color-gray-400: #E5EBF8;
+$color-gray-500: #EAF0FF;
+$color-gray-600: #D4DCF1;
+$color-gray-700: #DAE4FE;
+$color-gray-800: #D2E1FF;
+$color-gray-900: #C7D3FF;
+$color-gray-1000: #AEB8D0;
