@@ -189,6 +189,8 @@ h4 {
 
 .btns-group {
   display: flex;
+  position: relative;
+  z-index: 10;
 }
 .btns-group--center {
   justify-content: center;
@@ -795,7 +797,7 @@ h4 {
   transform: translate(-50%, -50%);
   border-radius: 100%;
   background-color: white;
-  background-image: url(/assets/img/zoom.svg);
+  background-image: url("/assets/img/zoom.svg");
   background-repeat: no-repeat;
   background-position: center;
   transition: 0.2s;
@@ -861,8 +863,15 @@ h4 {
   border-bottom: 1px solid #C7D3FF;
   padding: 20px 0;
 }
+.faq-slider__item--active .faq-wrapper-animation {
+  position: relative;
+  height: 114px;
+  opacity: 1;
+}
 .faq-slider__item--active .faq-wrapper-content {
+  position: absolute;
   display: flex;
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .faq-slider__item--active .faq-wrapper-content {
@@ -887,6 +896,7 @@ h4 {
   font-family: "Quicksand", sans-serif;
   font-weight: 500;
   transition: 0.2s;
+  cursor: pointer;
 }
 .faq-slider__item-text {
   flex-basis: 45%;
@@ -903,10 +913,16 @@ h4 {
   display: flex;
   align-items: center;
 }
+.faq-wrapper-animation {
+  height: 0;
+  opacity: 0;
+  transition: 0.2s ease-in-out;
+}
 .faq-wrapper-content {
   display: none;
   justify-content: space-between;
   align-items: center;
+  transition: 0.2s;
 }
 
 .section-get {

@@ -268,7 +268,8 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 }      
 .btns-group {
     display: flex;
-
+    position: relative;
+    z-index: 10;
     &--center {
         justify-content: center;
     }
@@ -943,7 +944,7 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
     transform:  translate(-50%, -50%);
     border-radius: 100%;
     background-color: white;
-    background-image: url(/assets/img/zoom.svg);
+    background-image: url("/assets/img/zoom.svg");
     background-repeat:  no-repeat;
     background-position: center;
     transition: $transition;
@@ -1015,43 +1016,50 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
             padding: $base * 5 0 ;
 
             &--active {
-                
-                .faq-wrapper-content {
-                    display: flex;
-                    
-
-                    @media (max-width: $breakpoint-md-min) {
-                        flex-direction: column;
-                        align-items: center;
-
-                        #{$parent}-btn {
-                            margin: 0;
-                        }
-
+                .faq-wrapper {
+                    &-animation{
+                        position: relative;
+                        height: 114px;
+                        opacity: 1;
                     }
-                }
+                    &-content {
+                        position: absolute;
+                        display: flex;
+                        opacity: 1;
+    
+                        @media (max-width: $breakpoint-md-min) {
+                            flex-direction: column;
+                            align-items: center;
+    
+                            #{$parent}-btn {
+                                margin: 0;
+                            }
+                        }
+                    }
+                } 
 
                 #{$parent}-question {
                     color: $color-blue-900;
                     font-weight: $fw-bold;
-
-
+                    
+                    
                 }
-
+                
                 .drop-btn {
                     transform: rotate(180deg);
                     
                     &--color {
                         stroke: $color-blue-900;
-
+                        
                     }
                 }
             }
-
+            
             &-question {
                 @include quicksand;
                 font-weight: $fw-medium;
                 transition: $transition;
+                cursor: pointer;
             }
             &-text { 
                 flex-basis: 45%;
@@ -1067,18 +1075,25 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
             }
         }
     }
-
-    &-wrapper-qstn {
-        display: flex;
-        align-items: center;
-    }
-
-    &-wrapper-content { 
-        display: none;
-        justify-content: space-between;
-        align-items: center;
+    &-wrapper{
+        &-qstn {
+            display: flex;
+            align-items: center;
+        }
+        &-animation {
+            height: 0;
+            opacity: 0;
+            transition: $transition ease-in-out;
+        }
+        &-content { 
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            transition: $transition;
+        }
     }
 }
+
 // ===/FAQ===
 
 // ===GET===
