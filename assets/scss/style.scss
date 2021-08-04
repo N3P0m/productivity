@@ -97,6 +97,8 @@ body {
     @include roboto;
     color: $color-blue-200;
     font-size: $fs-ms;
+    padding-top: $base * 21; 
+    
     
 }
 // ---heading---
@@ -376,13 +378,7 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 // /COMMON
 
 // ===HEADER===
-.section-header {
-    position: relative;
-    .section-inner {
-        padding-top: ($pd-vert/6);
-        padding-bottom: ($pd-vert/6);
-    }
-}
+
 .main-navigation {
     $parent: &;
     @include quicksand;
@@ -396,7 +392,6 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
         flex-direction: row;
         align-items: center;
         justify-content: space-between;
-        
 
         .section-header & {
             @media (max-width: $breakpoint-lg-min) {
@@ -412,6 +407,8 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
             align-items: flex-start;
             justify-content: start;
             font-size: $fs-m;
+            // transform: translateX(100%);
+            // transition: 2s;
 
             #{$parent}__nav {
                 margin-left: $base * 10;
@@ -451,18 +448,16 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
                 #{$parent}__nav {margin-left: $base * 5;}
                 #{$parent}__social {margin-left: $base * 7}
                 #{$parent}__btn{margin-left: $base * 5;}
+
+
             }
         }
         .section-footer & {
             @media (max-width: $breakpoint-lg-min) {
                 flex-direction: column;
 
-                #{$parent}__nav {
-                    margin: 0;
-                }
-                #{$parent}__social {
-                    margin: 0;
-                }
+                #{$parent}__nav {margin: 0;}
+                #{$parent}__social {margin: 0;}
             }
             @media (max-width: $breakpoint-sm-min) {
                 #{$parent}__nav {
@@ -498,9 +493,7 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
             }
             
             &-item {
-                & + & {
-                    margin-left: $base * 10;
-                }
+                & + & {margin-left: $base * 10;}
             }
     
             &-link {
@@ -513,9 +506,7 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
                     font-weight: $fw-bold;
                 }
     
-                &:hover {
-                    color: $color-blue-600;
-                }
+                &:hover {color: $color-blue-600;}
             }
     }
     &__social {
@@ -530,21 +521,47 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
             }
             
             &-item {
-                & + & {
-                    margin-left: $base * 10;
-                }
+                & + & {margin-left: $base * 10;}
                 
                 &:hover { 
-                    path {
-                        fill: $color-blue-600;
-                    }
+                    path {fill: $color-blue-600;}
                 }
-                path {
-                    transition: $transition;
-                }
+                path {transition: $transition;}
             }       
     }
 }  
+
+.section-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: $color-white;
+    z-index: 20;
+
+    &__shadow {
+        display: none;
+        margin: 0;
+        padding: 0;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        left: 0;
+        height: 100vh;        
+        background-color: rgba($color: #000000, $alpha: 0.5);
+    } 
+    &--active-nav {
+        .section-header__shadow {display: block;}
+
+        .main-navigation__wrapper {
+            &--active {display: flex;}
+        }
+    }
+    .section-inner {
+        padding-top: ($pd-vert/6);
+        padding-bottom: ($pd-vert/6);
+    }
+}
 // ===/HEADER===
 
 // ===HERO-IMAGE===
@@ -1019,30 +1036,34 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
                 .faq-wrapper {
                     &-animation{
                         position: relative;
-                        height: 114px;
+                        
+                        height: $base * 25 ;
                         opacity: 1;
                     }
                     &-content {
                         position: absolute;
                         display: flex;
                         opacity: 1;
+
     
-                        @media (max-width: $breakpoint-md-min) {
+                    }
+                    @media (max-width: $breakpoint-md-min) {
+                        &-content {
                             flex-direction: column;
                             align-items: center;
     
-                            #{$parent}-btn {
-                                margin: 0;
-                            }
+                            #{$parent}-btn {margin: 0;}
                         }
+                        &-animation {height: $base * 35;}
+                    }
+                    @media (max-width: $breakpoint-xs-max) {
+                        &-animation {height: $base * 45;}
                     }
                 } 
 
                 #{$parent}-question {
                     color: $color-blue-900;
                     font-weight: $fw-bold;
-                    
-                    
                 }
                 
                 .drop-btn {
@@ -1050,7 +1071,6 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
                     
                     &--color {
                         stroke: $color-blue-900;
-                        
                     }
                 }
             }
