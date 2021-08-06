@@ -13,7 +13,7 @@
     <main>
 <!-- HEADER -->
         <header class="section-outer section-header ">
-            <dir class="section-header__shadow"></dir>
+            <div class="section-header__shadow"></div>
             <div class="section-inner section-inner--wide">
                 <div class='main-navigation'>
                     <h1 class="main-navigation__logo">
@@ -70,23 +70,26 @@
 <!-- /HEADER -->
 
 <!-- HERO_IMAGE -->
-        <section class="section-outer section-hero-image">
-                <ul class=" hero-image">
-                    <li class="hero-image__item" style="background-image: url(./assets/img/hero-image-bg.png)">
-                        <div class="section-inner hero-image__content indent-l">
-                            <h2>PLAN YOUR LIFE</h2>
-                            <h3 class="hero-image__content-heading subtitle subtitle--l"><span class="fw-light-wrapper">Increase your</span> productivity</h3>
-                            <p  class=" hero-image__content-text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
-                            <div class="hero-image__btn">
-                                <svg width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <circle cx="26" cy="26" r="26" fill="white"/>
-                                    <path d="M31.2308 25.1767C32.2564 25.7649 32.2564 27.2351 31.2308 27.8233L24.3077 31.793C23.2821 32.3811 22 31.646 22 30.4698V22.5302C22 21.354 23.2821 20.6189 24.3077 21.207L31.2308 25.1767Z" fill="#5E81FF"/>
-                                </svg>
-                                
+        <section class="section-outer section-hero-image swiper-container">
+            
+                <!-- <div class="swiper-container"> -->
+                    <ul class="hero-image swiper-wrapper">
+                        <li class="hero-image__item swiper-slide" style="background-image: url(./assets/img/hero-image-bg.png)">
+                            <div class="section-inner hero-image__content indent-l">
+                                <h2>PLAN YOUR LIFE</h2>
+                                <h3 class="hero-image__content-heading subtitle subtitle--l"><span class="fw-light-wrapper">Increase your</span> productivity</h3>
+                                <p  class=" hero-image__content-text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an, insolens gubergren similique est cu. Et vel modus congue vituperata.</p>
+                                <button class="hero-image__btn">
+                                    <svg class='hero-image__btn-img' width="52" height="52" viewBox="0 0 52 52" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <circle cx="26" cy="26" r="26" fill="white"/>
+                                        <path d="M31.2308 25.1767C32.2564 25.7649 32.2564 27.2351 31.2308 27.8233L24.3077 31.793C23.2821 32.3811 22 31.646 22 30.4698V22.5302C22 21.354 23.2821 20.6189 24.3077 21.207L31.2308 25.1767Z" fill="#5E81FF"/>
+                                    </svg>
+                                    
+                                </button>
                             </div>
-                        </div>
-                    </li>
-                </ul>
+                        </li>
+                    </ul>
+                <!-- </div> -->
             
         </section>
 <!-- /HERO_IMAGE -->
@@ -223,42 +226,76 @@
 
 <!-- BLOG -->
         <section class="section-outer section-blog">
-            <div class="section-inner blog indent-l">
-                <h2 class="ta-c">OUR RESOURCES</h2>
-                <span class="blog__heading ta-c subtitle subtitle--s">Start reading our blog</span>
-                <ul class="card-list">
-                    <li class="card-list__item item">
-                        
-                        <div class="item__galery">
-                              
-                            <a class="item__galery-link item__galery-link--big" aria-label="image" href="#">
-                                <img class="item__galery-img" src="./assets/img/jpg/blog__img1.jpg" alt="">
-                                <div class="zoom"></div>
-                            </a>
-                            <a class="item__galery-link item__galery-link--smtop" aria-label="image" href="#">
-                                <img class="item__galery-img" src="./assets/img/jpg/blog__img2.jpg" alt="">
-                                <div class="zoom"></div>
-                            </a>
-                            <a class="item__galery-link item__galery-link--smbot" aria-label="image" href="#">
-                                <img class="item__galery-img" src="./assets/img/jpg/blog__img3.jpg" alt="">
-                                <div class="zoom"></div>
-                            </a>
-                              
-                        </div>
-                        <div class="item__content">
-                              <h3 class="item__content-heading subtitle subtitle--m">How to start planning</h3>
-                              <p class="item__content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore
-                              </p>   
-                              <div class="btns-group">
-                                  <button class="btn btn--secondary">Read now</button>
-                                  <button class="btn btn--glimmer">Add to your bookmarks</button>
-                              </div>
-                        </div>
-                        
-                    </li>
-                </ul>
-                <button class="blog__btn--prev arrow-btn arrow-btn--prev" aria-label="Button previously"></button>
-                <button class="blog__btn--next arrow-btn arrow-btn--next" aria-label="Button next"></button>
+            <div class="blog-container">
+                <div class="section-inner blog indent-l swiper-container">
+                    <h2 class="ta-c">OUR RESOURCES</h2>
+                    <span class="blog__heading ta-c subtitle subtitle--s">Start reading our blog</span>
+                    <ul class="card-list swiper-wrapper">
+                        <li class="card-list__item item swiper-slide">
+                            
+                            <div class="item__galery">
+                                  
+                                <a class="item__galery-link item__galery-link--big" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img1.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                <a class="item__galery-link item__galery-link--smtop" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img2.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                <a class="item__galery-link item__galery-link--smbot" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img3.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                  
+                            </div>
+                            <div class="item__content">
+                                  <h3 class="item__content-heading subtitle subtitle--m">How to start planning</h3>
+                                  <p class="item__content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore
+                                  </p>   
+                                  <div class="btns-group">
+                                      <button class="btn btn--secondary">Read now</button>
+                                      <button class="btn btn--glimmer">Add to your bookmarks</button>
+                                  </div>
+                            </div>
+                            
+                        </li>
+                        <li class="card-list__item item swiper-slide">
+                            
+                            <div class="item__galery">
+                                  
+                                <a class="item__galery-link item__galery-link--big" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img1.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                <a class="item__galery-link item__galery-link--smtop" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img2.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                <a class="item__galery-link item__galery-link--smbot" aria-label="image" href="#">
+                                    <img class="item__galery-img" src="./assets/img/jpg/blog__img3.jpg" alt="">
+                                    <div class="zoom"></div>
+                                </a>
+                                  
+                            </div>
+                            <div class="item__content">
+                                  <h3 class="item__content-heading subtitle subtitle--m">How to start planning</h3>
+                                  <p class="item__content-text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti. Natum petentium principes mei ea. Tota everti periculis vis ei, quas tibique pro at, eos ut decore
+                                  </p>   
+                                  <div class="btns-group">
+                                      <button class="btn btn--secondary">Read now</button>
+                                      <button class="btn btn--glimmer">Add to your bookmarks</button>
+                                  </div>
+                            </div>
+                            
+                        </li>
+                    </ul>
+                    <button class="blog__btn--prev arrow-btn arrow-btn--prev swiper-button-prev" aria-label="Button previously"></button>
+                    <button class="blog__btn--next arrow-btn arrow-btn--next swiper-button-next" aria-label="Button next"></button>
+                    <div class="blog-pagination swiper-pagination">
+
+                    </div>
+                </div>
             </div>
         </section>
 <!-- /BLOG -->
@@ -266,21 +303,56 @@
 <!-- QUOTES -->
         <section class="section-outer section-quotes">
             <div class="section-inner quotes-wrapper indent-l">
-                <div class="quotes-content">
-                    <h2>TESTIMONIALS</h2>
-                    <h3 class="subtitle subtitle--m">Customers's quotes</h3>
-                    <p class="quotes-content__text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
-                </div>
-                <div class="quotes-card ">
-                    <ul class="card-list">
-                        <li class="card-list__item item item--size">
-                            <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
-                            <div class="item__avatar">
-                                <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
-                            </div>
-                        </li>
-                    </ul>
-                </div>
+                
+                
+                    <div class="quotes-content">
+                        <h2>TESTIMONIALS</h2>
+                        <h3 class="subtitle subtitle--m">Customers's quotes</h3>
+                        <p class="quotes-content__text">Brute laoreet efficiendi id his, ea illum nonumes luptatum pro. Usu atqui laudem an.</p>
+                    </div>
+                    <div class="quotes-card ">
+                        <div class="quotes-card-container swiper-container">
+                            <ul class="quotes-card-list swiper-wrapper">
+                                <li class="quotes-card-list__item item item--size swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="quotes-card-list__item   swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="quotes-card-list__item item item--size swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="quotes-card-list__item item item--size swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="quotes-card-list__item item item--size swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                                <li class="quotes-card-list__item item item--size swiper-slide">
+                                    <p class="item__text">Quidam vocibus eum ne, erat consectetuer voluptatibus ut nam. Eu usu vidit tractatos, vero tractatos ius an, in mel diceret persecuti.</p>
+                                    <div class="item__avatar">
+                                        <img class="item__avatar-img" src="./assets/img/quotes__avatar.webp" alt="">
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="quotes-pagination swiper-pagination"></div>
+                        </div>
+                    </div>
                 
             </div>
         </section>
@@ -359,7 +431,7 @@
                                 </p>
                                 <button class="faq-slider__item-btn btn" >Go to documentation</button>
                             </div>
-                        </siv>
+                        </div>
                     </li>
                     <li class="faq-slider__item">
                         <div class="faq-wrapper-qstn">
@@ -470,6 +542,9 @@
         </footer>
         <!-- /FOOTER -->
     </main>
+    <link href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="./assets/js/script.js"></script>
 </body>

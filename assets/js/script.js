@@ -36,11 +36,10 @@ const closeNav = () => {
         gsap.set(shadow, {opacity: 1})
         gsap.set(activeNav, {x: 0})
         nav.classList.remove('section-header--active-nav')
-        
         showScroll()
     }})
 }
-
+shadow.addEventListener('click', closeNav)
 window.addEventListener('resize', closeNav)
 
 const hideScroll = () => {
@@ -74,3 +73,56 @@ const getScrollWidth = () => {
     return scrollWidth
 }
 // /BURGER-MENU
+
+// SWIPER 
+
+// hero-image
+const heroImage = new Swiper('.section-hero-image', {
+    direction: 'horizontal',
+    loop: true,
+    
+    navigation: {
+        nextEl: '.hero-image__btn',
+    },
+});
+// /hero-image
+
+// blog
+const blog = new Swiper('.blog', {
+    direction: 'horizontal',
+    slidesPerView: 1,
+    spaceBetween: 30,
+    watchSlidesVisibility: true,
+
+    pagination: {
+        el: '.blog .blog-pagination',
+        clickable: true,
+    },
+
+    navigation: {
+        nextEl: '.blog__btn--next',
+        prevEl: '.blog__btn--prev',
+    },
+
+    });
+// /blog
+
+// quotes
+const quotes = new Swiper('.quotes-card-container', {
+    direction: 'horizontal',
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 70,
+    watchSlidesVisibility: true,
+
+    pagination: {
+        el: '.quotes-card-container .quotes-pagination ',
+        //   type: 'bullet',
+        clickable: true,
+    },
+    });
+// /quotes
+    
+// /SWIPER 
+    
+
