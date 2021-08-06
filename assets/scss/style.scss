@@ -322,12 +322,6 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 // ---/buttons
 
 // ---swiper
-.swiper-slide {
-    &-active {
-        visibility: visible;
-        opacity: 1;
-    }
-}
 .swiper-pagination {
     width: 100%;
     text-align: center;
@@ -876,11 +870,9 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
 // ===/STATS===
 
 // ===BLOG===
-.section-blog {
-    background-color: $color-gray-100;
-}
-.blog {
+.section-blog {background-color: $color-gray-100;}
 
+.blog {
     &-container {
         margin: 0 auto;
         overflow: hidden;
@@ -920,6 +912,13 @@ h4 {font-size: 24px;margin-top: $base * 5; margin-bottom: $base * 23; font-weigh
         opacity: 0;
         transition: $transition;
         visibility: hidden;
+
+        &.swiper-slide {
+            &-visible {
+                visibility: visible;
+                opacity: 1;
+            }
+        }
 
         @media (max-width: $breakpoint-md-min) {
             flex-direction: column;

@@ -237,11 +237,6 @@ h4 {
   }
 }
 
-.swiper-slide-active {
-  visibility: visible;
-  opacity: 1;
-}
-
 .swiper-pagination {
   width: 100%;
   text-align: center;
@@ -793,6 +788,10 @@ h4 {
   opacity: 0;
   transition: 0.2s;
   visibility: hidden;
+}
+.card-list__item.swiper-slide-visible {
+  visibility: visible;
+  opacity: 1;
 }
 @media (max-width: 768px) {
   .card-list__item {
